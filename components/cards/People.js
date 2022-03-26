@@ -24,7 +24,10 @@ const People = ({ people, handleFollow, handleUnfollow }) => {
               title={
                 <div className="d-flex justify-content-between">
                   <Link href={`/user/${user.username}`}>
-                    <a>{user.username}</a>
+                    <a>
+                      {user.username} <br />{" "}
+                      <span style={{ color: "#303134" }}>{user.about}</span>
+                    </a>
                   </Link>
                   {state &&
                   state.user &&

@@ -42,7 +42,7 @@ const Username = () => {
     <div className="row col-md-6 offset-md-3">
       {/* <pre>{JSON.stringify(user, null, 4)}</pre> */}
       <div className="pt-5 pb-5">
-        <Card hoverable cover={<img src={imageSource(user)} alt={user.name}/>}>
+        <Card hoverable cover={<img src={imageSource(user)} alt={user.name} style={{height: '300px', objectFit: 'cover'}}/>}>
           <Meta title={user.name} description={user.about} />
           <p className="pt-2 text-muted">Joined {moment(user.createdAt).fromNow()}</p>
           <div className="d-flex justify-content-between">

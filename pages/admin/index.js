@@ -66,7 +66,7 @@ const Admin = () => {
           <div className="col-md-8 offset-md-2">
             {posts &&
               posts.map((post) => (
-                <div className="d-flex justify-content-between" key={post._id}>
+                <div className="d-flex justify-content-between" key={post._id} style={{}}>
                   <div className="">
                     {renderHTML(post.content)} - <b>{post.postedBy.name}</b>
                   </div>
