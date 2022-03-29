@@ -27,7 +27,7 @@ function Nav() {
         <a
           className={`nav-link text-light logo ${current === "/" && "active"}`}
         >
-          <Avatar src="/images/logo.png" /> MERNCAMP
+          <Avatar src="/images/logo.png" /> GLOOB
         </a>
       </Link>
 
@@ -51,7 +51,7 @@ function Nav() {
                       current === "/user/dashboard" && "active"
                     }`}
                   >
-                    Dashboard
+                    News feed
                   </a>
                 </Link>
               </li>
