@@ -20,7 +20,8 @@ function Register() {
       // console.log(name, email, password, secret);
       setLoading(true);
       const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_API}/register`,
+        // `${process.env.NEXT_PUBLIC_API}/register`,
+        `/register`,
         {
           name,
           email,
