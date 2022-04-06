@@ -34,7 +34,7 @@ const PostComments = () => {
         postId,
         comment,
       });
-      console.log('comment removed', data);
+      // console.log('comment removed', data);
       fetchPost()
     } catch (err) {
         console.log(err);

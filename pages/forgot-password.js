@@ -29,7 +29,7 @@ function ForgotPassword() {
         secret,
       });
 
-       console.log("forgot password res => ", data);
+      //  console.log("forgot password res => ", data);
 
       if (data.error) {
         toast.error(data.error);

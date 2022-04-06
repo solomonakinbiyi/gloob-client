@@ -51,7 +51,7 @@ function ProfileUpdate() {
         secret,
         image
       });
-      console.log("updated response => ", data);
+      // console.log("updated response => ", data);
       if (data.error) {
         toast.error(data.error);
         setLoading(false);

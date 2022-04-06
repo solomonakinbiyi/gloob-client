@@ -27,7 +27,7 @@ const Admin = () => {
       const { data } = await axios.get(`/posts`);
     //   console.log("user posts => ", data);
       setPosts(data);
-      console.log("user posts => ", posts[0]);
+      // console.log("user posts => ", posts[0]);
     } catch (error) {
       console.log(error);
     }

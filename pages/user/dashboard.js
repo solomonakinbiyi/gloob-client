@@ -87,7 +87,7 @@ const Home = () => {
     // console.log("post => ", content);
     try {
       const { data } = await axios.post("/create-post", { content, image });
-      console.log("Create post response => ", data);
+      // console.log("Create post response => ", data);
       if (data.error) {
         toast.error(data.error);
       } else {
@@ -195,7 +195,7 @@ const Home = () => {
         postId: currentPost._id,
         comment,
       });
-      console.log(data);
+      // console.log(data);
       setComment("");
       setVisible(false);
       newsFeed();
@@ -213,7 +213,7 @@ const Home = () => {
         postId,
         comment,
       });
-      console.log("comment removed", data);
+      // console.log("comment removed", data);
       newsFeed();
     } catch (err) {
       console.log(err);
