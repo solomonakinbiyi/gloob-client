@@ -16,3 +16,31 @@
 .pointer{
     cursor: pointer;
 }
+
+@media(max-width: 450px){
+    #newsfeedwrp{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    #newsfeedwrp>*{
+        padding-left: 2px!important;
+        padding-right: 2px!important;
+        
+    }
+    #userwrp{
+        width: 100%;
+        margin-right: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-left: 0 !important;
+    }
+    #userwrp div div {
+        width: 100%;
+        
+    }
+    #userwrp > *{
+        padding-left: 0!important;
+        padding-right: 0!important;
+       
+    }
+}

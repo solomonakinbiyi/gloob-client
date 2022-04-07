@@ -229,7 +229,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="row p-3" style={{ width: "100%", maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto'}}>
+      <div className="row p-3" id='newsfeedwrp' style={{ width: "100%", maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto'}}>
         <div className="col-md-8">
           <PostForm
             content={content}

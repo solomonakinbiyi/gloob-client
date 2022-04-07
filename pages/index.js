@@ -66,7 +66,7 @@ function index({ posts }) {
           {collection.map((post) => (
             <div className="col-md-4" key={post._id}>
               <Link href={`/post/view/${post._id}`}>
-                <a>
+                <a style={{color: 'black'}}>
                   <PostPublic key={post._id} post={post} />
                 </a>
               </Link>
