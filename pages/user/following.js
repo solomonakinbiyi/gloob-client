@@ -53,7 +53,7 @@ const Following = () => {
     }
   };
   return (
-    <div className='row col-md-6 offset-md-3'>
+    <div className="row col-md-6 offset-md-3">
       {/* <pre>{JSON.stringify(people, null, 4)}</pre> */}
       <List
         itemLayout="horizontal"
@@ -65,7 +65,26 @@ const Following = () => {
               avatar={<Avatar src={imageSource(user)} />}
               title={
                 <div className="d-flex justify-content-between">
-                  {user.username}{" "}
+                  <div>
+                    {user.username}{" "}
+                    <div>
+                      <span style={{ color: "#303134" }}>
+                        {user.about
+                          ? user.about
+                          : "Hey there! I'm using Gloob."}
+                      </span>
+                    </div>
+                    <div>
+                      <span style={{ color: "gray" }}>
+                        <span>{user.followers.length}&nbsp;</span>
+                        followers
+                      </span>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <span style={{ color: "gray" }}>
+                        <span>{user.following.length}&nbsp;</span> following
+                      </span>
+                    </div>
+                  </div>
                   <span
                     className="text-primary pointer"
                     onClick={() => handleUnfollow(user)}
@@ -80,7 +99,11 @@ const Following = () => {
           </List.Item>
         )}
       />
-      <Link href='/user/dashboard'><a className='d-flex justify-content-center pt-5'><RollbackOutlined/></a></Link>
+      <Link href="/user/dashboard">
+        <a className="d-flex justify-content-center pt-5">
+          <RollbackOutlined />
+        </a>
+      </Link>
     </div>
   );
 };

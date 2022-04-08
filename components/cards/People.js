@@ -26,7 +26,20 @@ const People = ({ people, handleFollow, handleUnfollow }) => {
                   <Link href={`/user/${user.username}`}>
                     <a>
                       {user.username} <br />{" "}
-                      <span style={{ color: "#303134" }}>{user.about}</span>
+                      <span style={{ color: "#303134" }}>
+                        {user.about ? user.about : "Hey there! I'm using Gloob."}
+                      </span>
+                      <br />{" "}
+                      <div>
+                        <span style={{ color: "gray" }}>
+                          <span>{user.followers.length}&nbsp;</span>
+                          followers
+                        </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style={{ color: "gray" }}>
+                          <span>{user.following.length}&nbsp;</span> following
+                        </span>
+                      </div>
                     </a>
                   </Link>
                   {state &&

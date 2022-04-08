@@ -32,9 +32,15 @@ const Post = ({
         <div key={post._id} className="card mb-5">
           <div className="card-header">
             {/* <Avatar size={40}>{post.postedBy.name[0]}</Avatar>{" "} */}
-            <Avatar size={40} src={imageSource(post.postedBy)} />{" "}
+            <Link href={`/post/${post._id}`}>
+              <a>
+                <Avatar size={40} src={imageSource(post.postedBy)} />
+              </a>
+            </Link>
             <span className="pt-2 ml-3" style={{ marginLeft: "1rem" }}>
-              {post.postedBy.name}
+              <Link href={`/post/${post._id}`}>
+                <a style={{ color: "black" }}>{post.postedBy.name}</a>
+              </Link>
             </span>
             <span className="pt-2 ml-3" style={{ marginLeft: "1rem" }}>
               {moment(post.createdAt).fromNow()}
@@ -65,11 +71,7 @@ const Post = ({
                 onClick={() => handleComment(post)}
                 className="text-danger pt-2 h5 px-2"
               />
-              <div className="pt-2 pl-3">
-                <Link href={`/post/${post._id}`}>
-                  <a>{post.comments.length} comments</a>
-                </Link>
-              </div>
+              <div className="pt-2 pl-3">{post.comments.length} comments</div>
 
               {state && state.user && state.user._id === post.postedBy._id && (
                 <>
@@ -89,7 +91,10 @@ const Post = ({
             // <ul className="list-group" style={{height: '125px', overflowY: 'scroll'}}>
             <ul className="list-group">
               {post.comments.slice(0, commentsCount).map((c) => (
-                <li key={c._id} className="list-group-item d-flex justify-content-between align-items-start">
+                <li
+                  key={c._id}
+                  className="list-group-item d-flex justify-content-between align-items-start"
+                >
                   <div className="ms-2 me-auto">
                     <div className="">
                       <Avatar
@@ -105,7 +110,10 @@ const Post = ({
                     {moment(c.created).fromNow()}
                     {state && state.user && state.user._id === c.postedBy._id && (
                       <div className="ml-auto mt-1">
-                        <DeleteOutlined onClick={() => removeComment(post._id, c)} className="pl-2 text-danger" />
+                        <DeleteOutlined
+                          onClick={() => removeComment(post._id, c)}
+                          className="pl-2 text-danger"
+                        />
                       </div>
                     )}
                   </span>

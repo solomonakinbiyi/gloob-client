@@ -255,7 +255,7 @@ const Home = () => {
             className='pb-5'
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4" id='peoplefll'>
           <Search/>
           <br />
           {/* <pre>{JSON.stringify(people, null, 4)}</pre> */}
