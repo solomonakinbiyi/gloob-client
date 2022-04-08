@@ -36,7 +36,7 @@ function index({ posts }) {
 
   const head = () => (
     <Head>
-      <title>MERNCAMP - A social network by devs for devs</title>
+      <title>Gloob - A social network by devs for devs</title>
       <meta name="description" content="A social network by devs for devs" />
       <meta
         property="og:description"
