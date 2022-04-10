@@ -77,10 +77,22 @@
     }
 } */
 
-#newsfeedwrp{
+
+#peoplefll{
     
 }
 
-#peoplefll{
+@media (max-width: 450px) {
+    #newsfeedwrp{
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    #flwnglist{
+        width: 100%;
+        padding: 0 10px;
+        padding-left: 40px;
+    }
     
 }

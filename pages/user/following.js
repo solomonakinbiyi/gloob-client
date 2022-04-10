@@ -53,7 +53,7 @@ const Following = () => {
     }
   };
   return (
-    <div className="row col-md-6 offset-md-3">
+    <div className="row col-md-6 offset-md-3" id='flwnglist'>
       {/* <pre>{JSON.stringify(people, null, 4)}</pre> */}
       <List
         itemLayout="horizontal"

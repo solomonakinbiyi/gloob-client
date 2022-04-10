@@ -42,9 +42,9 @@ const Username = () => {
     <div className="row col-md-6 offset-md-3" id='userwrp'>
       {/* <pre>{JSON.stringify(user, null, 4)}</pre> */}
       <div className="pt-5 pb-5">
-        <Card hoverable cover={<img src={imageSource(user)} alt={user.name} style={{height: '300px', objectFit: 'cover'}}/>}>
+        <Card hoverable cover={<img src={imageSource(user)} alt={user.name} style={{height: '400px', objectFit: 'cover'}}/>}>
           <Meta title={user.name} description={user.about} />
-          <p className="pt-2 text-muted">Joined {moment(user.createdAt).fromNow()}</p>
+          <p className="pt-2 ">Joined {moment(user.createdAt).fromNow()}</p>
           <div className="d-flex justify-content-between">
             <span className='btn btn-sm'>{user.followers && user.followers.length} Follower</span>
             <span className='btn btn-sm'>{user.following && user.following.length} Following</span>
