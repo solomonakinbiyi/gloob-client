@@ -24,7 +24,6 @@ const Search = () => {
     // console.log('add this user to folllowing list ', user);
     try {
       const { data } = await axios.put("/user-follow", { _id: user._id });
-      // console.log("handle follow response => ", data);
       // update local storage, update user, keep token as it is
       let auth = JSON.parse(localStorage.getItem("auth"));
       auth.user = data;
