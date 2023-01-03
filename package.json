@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next i --legacy-peer-deps build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
